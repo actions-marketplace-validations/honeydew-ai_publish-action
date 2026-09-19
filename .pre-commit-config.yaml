@@ -5,12 +5,12 @@ repos:
     hooks:
       - id: add-trailing-comma
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.16.2
+    rev: v0.16.4
     hooks:
       - id: ruff-check
         args: ["--fix", "--quiet"]
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v2.3.0
+    rev: v2.3.1
     hooks:
       - id: mypy
         additional_dependencies: [pytest==9.1.1]
@@ -23,7 +23,7 @@ repos:
     hooks:
       - id: yamllint
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.37.4
+    rev: 0.38.0
     hooks:
       # The only check that reads action.yml, which is this repo's product.
       - id: check-github-actions
@@ -32,7 +32,7 @@ repos:
         args: ["--quiet"]
         files: ^(\.github/workflows/[^/]+|examples/[^/]+)$
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.7.7
+    rev: v1.7.12
     hooks:
       # Semantics the schema cannot express: expression types, context
       # availability, and a caller's inputs against the reusable workflow it
